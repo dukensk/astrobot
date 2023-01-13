@@ -21,7 +21,6 @@ environ.Env.read_env()  # reading .env file
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = root
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -39,10 +38,10 @@ INTERNAL_IPS = [
 
 SITE_ID = 1
 
-
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -83,14 +82,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
     'default': env.db(),
 }
-
 
 CACHES = {
     'default': {
@@ -117,7 +114,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
@@ -138,7 +134,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
@@ -156,3 +151,44 @@ STATIC_ROOT = public_root / 'assets/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Jazzmin settings
+JAZZMIN_SETTINGS = {
+    # title of the window (Will default to current_admin_site.site_title if absent or None)
+    'site_title': 'Админка AstroBot',
+
+    # Title on the brand, and login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)
+    'site_header': 'AstroBot',
+
+    # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)
+    "site_brand": "AstroBot",
+
+    # Copyright on the footer
+    'copyright': 'SONI',
+
+    # Whether to show the UI customizer on the sidebar
+    "show_ui_builder": True,
+
+    'custom_css': 'jazzmin/jazzmin_custom.css',
+
+    'usermenu_links': [
+        {'name': _('Clear cache'), 'url': 'clearcache_admin', 'icon': 'fas fa-trash'},
+    ],
+
+    #############
+    # Side Menu #
+    #############
+
+    # Whether to display the side menu
+    'show_sidebar': True,
+
+    # Whether to aut expand the menu
+    'navigation_expanded': True,
+
+    # Hide these apps when generating side menu e.g (auth)
+    'hide_apps': [],
+
+    # Hide these models when generating side menu (e.g auth.user)
+    'hide_models': [],
+
+}
