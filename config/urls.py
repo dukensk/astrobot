@@ -18,8 +18,11 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from common.views import robots_txt
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('robots.txt', robots_txt),
 ]
 
 if settings.DEBUG:

@@ -195,3 +195,7 @@ JAZZMIN_SETTINGS = {
     'hide_models': [],
 
 }
+
+
+# Closing from indexing
+SITE_NO_INDEX = env.bool('SITE_NO_INDEX', default=False)
