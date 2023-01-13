@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'django.contrib.postgres',
     'debug_toolbar',
     'common',
@@ -195,7 +196,6 @@ JAZZMIN_SETTINGS = {
     'hide_models': [],
 
 }
-
 
 # Closing from indexing
 SITE_NO_INDEX = env.bool('SITE_NO_INDEX', default=False)
