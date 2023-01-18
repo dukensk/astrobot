@@ -36,3 +36,6 @@ django-celery-beat==2.4.0
 # Telegram
 python-telegram-bot==20.0
 python-telegram-bot-pagination==0.0.2
+
+# PSN
+PSNAWP==1.2.1
