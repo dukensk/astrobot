@@ -30,6 +30,7 @@ psycopg2-binary==2.9.5
 # Distributed tasks
 celery==5.2.7
 redis==4.4.2
+django-celery-beat==2.4.0
 
 
 # Telegram
