@@ -17,6 +17,9 @@ django-timezone-field==5.0
 django-cors-headers==3.13.0
 pillow==9.4.0
 
+# Django async
+gunicorn==20.1.0
+
 #DB
 sqlparse==0.4.3
 psycopg2-binary==2.9.5
