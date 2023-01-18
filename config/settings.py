@@ -51,7 +51,10 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.postgres',
     'debug_toolbar',
+
+    # local apps
     'common',
+    'tgbot.apps.TgbotConfig',
 ]
 
 MIDDLEWARE = [
