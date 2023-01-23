@@ -202,3 +202,6 @@ JAZZMIN_SETTINGS = {
 
 # Closing from indexing
 SITE_NO_INDEX = env.bool('SITE_NO_INDEX', default=False)
+
+# Telegram Bot
+TELEGRAM_BOT_TOKEN = env('TELEGRAM_BOT_TOKEN')
