@@ -1,8 +1,9 @@
 from django.core.management.base import BaseCommand
 from django.conf import settings
 
-from telegram import Update
-from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+from telegram.ext import ApplicationBuilder, CommandHandler
+
+from tgbot.handlers.commands import start, help
 
 
 class Command(BaseCommand):
@@ -12,11 +13,9 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         print('AstroBot running')
 
-        async def hello(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-            await update.message.reply_text(f'Hello {update.effective_user.first_name}')
-
         app = ApplicationBuilder().token(settings.TELEGRAM_BOT_TOKEN).build()
 
-        app.add_handler(CommandHandler("hello", hello))
+        app.add_handler(CommandHandler('start', start))
+        app.add_handler(CommandHandler('help', help))
 
         app.run_polling()
