@@ -1,6 +1,6 @@
 pip==23.0
 asgiref==3.6.0
-setuptools==67.1.0
+setuptools==67.2.0
 tzdata==2022.7
 wheel==0.38.4
 pytz==2022.7.1
@@ -12,7 +12,7 @@ Django==4.1.6
 django-environ==0.9.0
 django-debug-toolbar==3.8.1
 django-jazzmin==2.6.0
-django-cleanup==6.0.0
+django-cleanup==7.0.0
 django-timezone-field==5.0
 django-cors-headers==3.13.0
 pillow==9.4.0
