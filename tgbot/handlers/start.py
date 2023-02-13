@@ -1,5 +1,3 @@
-from django.conf import settings
-
 from telegram import Update
 from telegram.ext import ContextTypes
 

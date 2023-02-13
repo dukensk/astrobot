@@ -1,6 +1,3 @@
-from django.conf import settings
-from django.template.loader import render_to_string
-
 from telegram import Update
 from telegram.ext import ContextTypes
 
